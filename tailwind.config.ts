@@ -8,6 +8,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        satoshi: "var(--font-satoshi-bold)",
+        exo: ["var(--font-exo)", "sans-serif"],
+        // exoBold: ["Exo-Bold", "sans-serif"],
+        // xoReg: ["Exo-Reg", "sans-serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
