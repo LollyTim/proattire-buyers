@@ -52,7 +52,7 @@ const Page = () => {
             <div className='w-full h-20 justify-center items-center flex flex-row'>
                 <nav className='w-[90%] flex flex-row justify-between items-center max-w-6xl mx-auto px-4 sm:px-0'>
                     <img src="/plogo.png" alt="logo" className='h-10 sm:h-auto' />
-                    <a href="/buyers" className='text underline text-blue-500'>Register as a seller</a>
+                    <a href="/" className='text underline text-blue-500'>Register as a seller</a>
                 </nav>
             </div>
 
@@ -60,13 +60,13 @@ const Page = () => {
             <div className='flex-grow flex flex-col'>
                 {/* Content Section */}
                 <div className='flex-grow flex items-center justify-center px-4 sm:px-0'>
-                    <div className='text-center max-w-lg w-full'>
-                        <div className='space-y-6'>
+                    <div className='text-center items-center justify-center max-w-lg w-full'>
+                        <div className='space-y-6 justify-center items-center flex flex-col'>
                             <h1 className='text-2xl sm:text-[40px]  font-semibold leading-tight sm:leading-[48px] font-exo'>
                                 Fashion shopping made
                                 easy, secure, and personal
                             </h1>
-                            <p className='max-w-md'>
+                            <p className='max-w-sm'>
                                 Shop bespoke and ready-to-wear fashion
                                 from trusted vendors across Africa.
                             </p>
@@ -100,7 +100,7 @@ const Page = () => {
 
                 {/* Image Section - Always below content */}
                 <div
-                    className='w-full h-[30vh] sm:h-[50vh] bg-cover bg-center'
+                    className='w-full h-[30vh] sm:h-[47vh] bg-cover bg-center'
                     style={{
                         backgroundImage: 'url("./Frame 312 (1).png")',
                         backgroundRepeat: 'no-repeat',
