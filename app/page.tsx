@@ -53,7 +53,7 @@ const Page = () => {
       <div className='w-full h-20 justify-center items-center flex flex-row'>
         <nav className='w-[90%] flex flex-row justify-between items-center max-w-6xl mx-auto px-4 sm:px-0'>
           <img src="/plogo.png" alt="logo" className='h-10 sm:h-auto' />
-          <a href="#" className='text underline text-blue-500'>I am a buyer</a>
+          <a href="/buyers" className='text underline text-blue-500'>I am a buyer</a>
         </nav>
       </div>
 
@@ -61,8 +61,8 @@ const Page = () => {
       <div className='flex flex-col sm:flex-row justify-start items-center h-[90vh]'>
         {/* Left Content */}
         <div className='w-full sm:w-[50%] h-[70%] sm:h-full justify-center sm:justify-center sm:mx-auto flex flex-col items-center sm:items-center px-4 sm:px-0 gap-8'>
-          <div className='justify-start items-center sm:items-start w-full sm:w-[400px] flex flex-col gap-6 text-center sm:text-left'>
-            <h1 className='text-2xl sm:text-[36px] font-semibold leading-tight sm:leading-[48px] font-exo'>
+          <div className='justify-start items-center sm:items-start w-full sm:w-[370px] flex flex-col gap-6 text-center sm:-ml-10 sm:text-left'>
+            <h1 className='text-2xl sm:text-[40px] font-semibold leading-tight sm:leading-[48px] font-exo'>
               Sell where shoppers  <span className='text-[#FFB16C]'>are</span>
             </h1>
             <p className='text-center sm:text-left'>
