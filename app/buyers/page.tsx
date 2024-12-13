@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 const Page = () => {
@@ -52,7 +53,7 @@ const Page = () => {
             <div className='w-full h-20 justify-center items-center flex flex-row'>
                 <nav className='w-[90%] flex flex-row justify-between items-center max-w-6xl mx-auto px-4 sm:px-0'>
                     <img src="/plogo.png" alt="logo" className='h-10 sm:h-auto' />
-                    <a href="/" className='text underline text-blue-500'>Register as a seller</a>
+                    <Link href="/" className='text underline text-blue-500'>Register as a seller</Link>
                 </nav>
             </div>
 
