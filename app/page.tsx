@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Page = () => {
   const [email, setEmail] = useState('');
@@ -30,10 +30,22 @@ const Page = () => {
     } catch (error) {
       console.error('Submission error:', error);
       setMessage('An error occurred while submitting your email. Please try again later.');
+      // Clear the error message after 5 seconds
+      setTimeout(() => setMessage(''), 5000);
     } finally {
       setIsLoading(false);
     }
   };
+
+  // If you want the success message to also disappear, you can add this effect:
+  useEffect(() => {
+    if (message && !message.includes('error')) {
+      const timer = setTimeout(() => {
+        setMessage('');
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
 
   return (
     <div className='max-h-[100vh]'>
@@ -51,10 +63,10 @@ const Page = () => {
         <div className='w-full sm:w-[50%] h-[70%] sm:h-full justify-center sm:justify-center sm:mx-auto flex flex-col items-center sm:items-center px-4 sm:px-0 gap-8'>
           <div className='justify-start items-center sm:items-start w-full sm:w-[400px] flex flex-col gap-6 text-center sm:text-left'>
             <h1 className='text-2xl sm:text-[36px] font-semibold leading-tight sm:leading-[48px] font-exo'>
-              Sell where shoppers are buying, sell <span className='text-[#FFB16C]'>with us</span>
+              Sell where shoppers  <span className='text-[#FFB16C]'>are</span>
             </h1>
             <p className='text-center sm:text-left'>
-              Market your fashion products to thousands of buyers, partners and sponsors on Proattire
+              Place your fashion products in front of thousands of shoppers, on Proattire
             </p>
           </div>
 
@@ -72,10 +84,14 @@ const Page = () => {
               className='w-full sm:w-auto sm:rounded-tr-md sm:rounded-br-md p-4 bg-[#FFB16C] text-[#190C01]'
               disabled={isLoading}
             >
-              {isLoading ? 'Loading...' : 'Join wait list'}
+              {isLoading ? 'Loading...' : 'Join waitlist'}
             </button>
           </form>
-          {message && <p className="text-center text-green-600 mt-4">{message}</p>}
+          {message &&
+            <p className={`text-center ${message.includes('error') ? 'text-red-600' : 'text-green-600'} mt-4`}>
+              {message}
+            </p>
+          }
         </div>
 
         {/* Right Image */}
