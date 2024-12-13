@@ -82,7 +82,7 @@ const Page = () => {
             />
             <button
               type="submit"
-              className='w-full sm:w-auto sm:rounded-tr-md sm:rounded-br-md p-4 bg-[#FFB16C] text-[#190C01]'
+              className='w-full sm:w-auto rounded-md sm:rounded-tr-md sm:rounded-tl-none sm:rounded-bl-none sm:rounded-br-md p-4 bg-[#FFB16C] text-[#190C01]'
               disabled={isLoading}
             >
               {isLoading ? 'Loading...' : 'Join waitlist'}

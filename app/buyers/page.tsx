@@ -83,7 +83,7 @@ const Page = () => {
                                 />
                                 <button
                                     type="submit"
-                                    className='w-full sm:w-auto sm:rounded-tr-md sm:rounded-br-md p-4 bg-[#FFB16C] text-[#190C01]'
+                                    className='w-full sm:w-auto rounded-md sm:rounded-tl-none sm:rounded-bl-none sm:rounded-tr-md sm:rounded-br-md p-4 bg-[#FFB16C] text-[#190C01]'
                                     disabled={isLoading}
                                 >
                                     {isLoading ? 'Loading...' : 'Join waitlist'}
@@ -99,7 +99,6 @@ const Page = () => {
                     </div>
                 </div>
 
-                {/* Image Section - Always below content */}
                 <div
                     className='w-full h-[30vh] sm:h-[47vh] bg-cover bg-center'
                     style={{
