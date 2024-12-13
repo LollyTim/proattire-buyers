@@ -41,7 +41,7 @@ const Page = () => {
         if (message && !message.includes('error')) {
             const timer = setTimeout(() => {
                 setMessage('');
-            }, 5000);
+            }, 4000);
             return () => clearTimeout(timer);
         }
     }, [message]);
